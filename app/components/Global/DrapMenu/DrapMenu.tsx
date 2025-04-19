@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useContext, useState } from "react";
+import React, {   useContext, useState } from "react";
 import { MyContext } from "@/app/context/myContext";
 import Image from "next/image";
 import DrapCard from "./DrapCard";
@@ -37,6 +37,30 @@ const widgetsData = [
     title: "Bubble Chart",
     category: "Statistics",
   },
+  {
+    id: 5,
+    image: "/assets/58d223d66efde9ee66255a864775d6c9.png",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+    title: "Bubble Chart",
+    category: "Statistics",
+  },
+  {
+    id: 6,
+    image: "/assets/58d223d66efde9ee66255a864775d6c9.png",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+    title: "Bubble Chart",
+    category: "Statistics",
+  },
+  {
+    id: 7,
+    image: "/assets/58d223d66efde9ee66255a864775d6c9.png",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+    title: "Bubble Chart",
+    category: "Statistics",
+  },
    
 ];
 
@@ -59,7 +83,7 @@ export default function SidebarWidgetPanel() {
     <div
       className={`${
         open_drap_menu ? " right-0" : " -right-[240px]"
-      } fixed z-50 top-[55px] w-[240px] transition-all duration-200 bg-white  border-[#27336963] h-full border-l-[3px] py-[13px] pl-[15px] pr-2 flex flex-col`}
+      } fixed z-50 top-[55px] w-[240px] transition-all duration-200 bg-white   border-[#27336963] h-full border-l-[3px] py-[13px] pl-[15px] pr-2 flex flex-col`}
     >
       {/* Start Title And Close */}
       <div className="flex justify-between items-center mb-1">
@@ -112,7 +136,8 @@ export default function SidebarWidgetPanel() {
         ))}
       </div>
       {/* Start Cards */}
-      <div className=" custom-scroll pr-[10px] flex-1">
+      <div className="overflow-y-scroll custom-scroll pr-[10px] flex-1 mb-10"
+      >
         {filteredWidgets.map((widget) => (
          <div key={widget.id}>
           <DrapCard widget={widget} drap={true}/>
